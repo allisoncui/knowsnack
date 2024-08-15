@@ -1,0 +1,25 @@
+.homepage header,
+.homepage nav,
+.homepage footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.homepage header {
+    background-color: #ffffff;
+}
+
+.homepage button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.images img {
+    width: 30%;
+    padding: 10px;
+}
