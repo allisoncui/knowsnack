@@ -2,14 +2,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFA;
+    padding: 10px 40px;
 }
 
 .navbar-logo {
     font-size: 24px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    width: 134px;
+    height: 40px;
+    margin-right: 84px;
 }
 
 .navbar-links {
@@ -17,27 +24,60 @@
     display: flex;
     margin: 0;
     padding: 0;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .navbar-links li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .navbar-links a {
     text-decoration: none;
     color: #333333;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    position: relative;
 }
 
-.navbar-links a:hover {
+.navbar-links a:hover,
+.navbar-links a.active {
     color: #008000;
 }
 
-.navbar a {
+.navbar-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #008000;
+    transition: width 0.5s ease;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+    width: 100%;
+}
+
+.navbar-support {
+    background-color: #03C071;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
     text-decoration: none;
-    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 30px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
-.navbar a:hover {
-    color: #008000;
+.navbar-support:hover {
+    background-color: #008000;
 }

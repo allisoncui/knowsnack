@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-logo">
-                <Link to="/">KnowSnack</Link>
+                <Link to="/"><img src="/assets/knowsnack_logo.jpg"alt="Knowsnack logo" /></Link>
             </div>
             <ul className="navbar-links">
                 <li>
@@ -18,10 +18,8 @@ function Navbar() {
                 <li>
                     <Link to="/contact">Contact</Link>
                 </li>
-                <li>
-                    <Link to="/support">Support Us</Link>
-                </li>
             </ul>
+            <Link to="/support" className="navbar-support">Support Us</Link>
         </nav>
     );
 }
